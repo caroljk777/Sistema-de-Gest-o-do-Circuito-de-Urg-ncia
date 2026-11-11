@@ -3,6 +3,6 @@
 #include <time.h>
 
 int main() {
-    printf("Hello, World!\n");
+    printf("projeto psi \n");
     return 0;
 }
