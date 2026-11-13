@@ -6,7 +6,7 @@ int main(void){
     int opcao;
 
     do{
-        printf("Menu Principal\n");
+        printf("\nMenu Principal\n");
         printf("1 - Administração\n");
         printf("2 - Enfermagem\n");
         printf("3 - Médico\n");
@@ -17,16 +17,16 @@ int main(void){
         
         switch(opcao){
             case 1:
-                printf("admin");
+                printf("admin\n");
                 break;
             case 2:
-                printf("enfermagem");
+                printf("enfermagem\n");
                 break;
             case 3:
-                printf("medico");
+                printf("medico\n");
                 break;
             case 4:
-                printf("gestao");
+                printf("gestao\n");
                 break;
             case 5:
                 printf("Final de turno, a sair..\n");
