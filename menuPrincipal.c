@@ -26,13 +26,13 @@ int main(void){
                 printf("medico\n");
                 break;
             case 4:
-                printf("gestaooooooooooooo\n");
+                printf("gestao\n");
                 break;
             case 5:
                 printf("Final de turno, a sair..\n");
                 break;
-            default:
-                printf("Opcao invalida. Tente novamente.\n");
+            default:        
+                printf("Opção inválida. Tente novamente.\n");
         }
     } while(opcao != 5);
 
