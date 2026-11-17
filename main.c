@@ -1,14 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
-
 #include "header.h" 
 
-    void menuPrincipal() {
-
-    menuPrincipal();
-    
-
-    printf("projeto psi \n");
-   
+int main(void) {
+    menuPrincipal(); // Chama o menu que está no menuPrincipal.c
+    return 0;
 }

@@ -5,7 +5,11 @@ void administracao(void) {
 
     do {
         system("clear"); //apenas no mac
-        printf("\n=== PERFIL ADMINISTRACAO ===\n");
+        printf("\n**********************************************\n");
+        printf("\n**********************************************\n");
+        printf("\n*********** PERFIL ADMINISTRACAO *************\n");
+        printf("\n**********************************************\n");
+        printf("\n**********************************************\n");
         printf("1 - Admitir Novo Utente\n");
         printf("2 - Listar Utentes Ativos\n");
         printf("3 - Listar Utentes com Alta\n");
