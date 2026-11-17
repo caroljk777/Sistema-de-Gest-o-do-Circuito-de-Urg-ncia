@@ -1,12 +1,11 @@
-#include <stdio.h>
 #include "header.h"
 
-int main(void){
-    
+void menuPrincipal(void) {
     int opcao;
 
-    do{
-        printf("\nMenu Principal\n");
+    do {
+        system("clear"); // para limpar o ecra (só funciona no meu mac, tens de alterar) 
+        printf("\n=== MENU PRINCIPAL ===\n");
         printf("1 - Administração\n");
         printf("2 - Enfermagem\n");
         printf("3 - Médico\n");
@@ -15,18 +14,18 @@ int main(void){
         printf("Escolha uma opcao: ");
         scanf("%d", &opcao);
         
-        switch(opcao){
+        switch(opcao) {
             case 1:
-                administracao();
+                administracao(); // Entra no ficheiro administracao.c
                 break;
             case 2:
-                printf("enfermagem\n");
+                enfermagem();
                 break;
             case 3:
-                printf("medico\n");
+                medico();
                 break;
             case 4:
-                printf("gestao\n");
+                gestao();
                 break;
             case 5:
                 printf("Final de turno, a sair..\n");
@@ -35,6 +34,4 @@ int main(void){
                 printf("Opção inválida. Tente novamente.\n");
         }
     } while(opcao != 5);
-
-
 }
