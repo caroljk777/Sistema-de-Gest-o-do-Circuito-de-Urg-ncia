@@ -17,7 +17,7 @@ int main(void){
         
         switch(opcao){
             case 1:
-                printf("admin\n");
+                administracao();
                 break;
             case 2:
                 printf("enfermagem\n");

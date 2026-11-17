@@ -1,30 +1,33 @@
-#include <stdio.h>
 #include "header.h"
 
-
-int main(void){
-
+void administracao(void) {
     int opcao;
 
-    do{
-        printf("\nMenu Principal\n");
-        printf("1 - Administração\n");
-        printf("5 - Sair\n");
+    do {
+        system("clear"); //apenas no mac
+        printf("\n=== PERFIL ADMINISTRACAO ===\n");
+        printf("1 - Admitir Novo Utente\n");
+        printf("2 - Listar Utentes Ativos\n");
+        printf("3 - Listar Utentes com Alta\n");
+        printf("0 - Voltar ao Menu Principal\n");
         printf("Escolha uma opcao: ");
         scanf("%d", &opcao);
         
-        switch(opcao){
+        switch(opcao) {
             case 1:
-                printf("admin\n");
+                printf("A abrir admissao de utente...\n");
                 break;
-          
-            case 5:
-                printf("Final de turno, a sair..\n");
+            case 2:
+                printf("A listar utentes ativos...\n");
+                break;
+            case 3:
+                printf("A listar utentes com alta...\n");
+                break;
+            case 0:
+               //aqui vai apenas voltar ao menu principal, esse é o motivo pelo qual n existe printf
                 break;
             default:        
                 printf("Opção inválida. Tente novamente.\n");
         }
-    } while(opcao != 5);
-
-
-}
+    } while(opcao != 0);
+};
