@@ -7,6 +7,7 @@
     void menuPrincipal() {
 
     menuPrincipal();
+    
 
     printf("projeto psi \n");
    

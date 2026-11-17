@@ -5,5 +5,6 @@
 #include <string.h>
 
 void menuPrincipal(void);
+void menuAdministracao(void);
 
 #endif
