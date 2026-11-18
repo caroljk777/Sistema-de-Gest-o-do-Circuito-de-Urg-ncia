@@ -25,7 +25,7 @@ void administracao(void) {
             case 1:
                 printf("A abrir admissao de utente...\n");
                 if (totalUtentes < 25) {
-                    int novoId;
+                    int novoID;
                     printf("Digite o ID unico do utente (ex: Numero SNS):\n");
                     scanf("%d", &novoId);
 
@@ -55,7 +55,7 @@ void administracao(void) {
 
                         strcpy(listaUtentes[totalUtentes].estado, "Aguarda Triagem");
                         totalUtentes++;
-                        printf("\nUtente admitido com sucesso! Estado: Aguarda Triagem")
+                        printf("\nUtente admitido com sucesso! Estado: Aguarda Triagem");
                     }
                 } else {
                     printf("\nVai ser reencaminhado para o hospital.\n");
@@ -98,7 +98,7 @@ void administracao(void) {
                         }
                     }
                     if (contador == 0) {
-                        printf("Nenhum utente com alta registado.\n")
+                        printf("Nenhum utente com alta registado.\n");
                     }
                 }
                 {
