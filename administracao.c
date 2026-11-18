@@ -25,30 +25,31 @@ void administracao(void) {
             case 1:
                 printf("A abrir admissao de utente...\n");
                 if (totalUtentes < 25) {
-                    int novoID;
+                    int novoId;
                     printf("Digite o ID unico do utente (ex: Numero SNS):\n");
                     scanf("%d", &novoId);
 
                     //verificação se o ID já existe
                     int repetido = 0;
                     for(int i = 0; i < totalUtentes; i++) {
-                        if(listaUtentes[i].id == novoID) {  //VER O PQ
+                        if(listaUtentes[i].id == novoId) {
                             repetido = 1;
                         }
                     }
                     if(repetido == 1) {
-                        printf("\n([ERRO]: Ja existe um utente com este ID.\n");
+                        printf("\n[ERRO]: Ja existe um utente com este ID.\n");
                     } else {
                         listaUtentes[totalUtentes].id = novoId;
 
                         printf("Digite o Nome Completo:\n");
-                        scanf("%[^\n]", listaUtentes[totalUtentes].nome);     //%[^\n] serve para que o nome n seja cortado e apareça todo ele completo sem espaços
+                        scanf(" %[^\n]", listaUtentes[totalUtentes].nome);     //o espaço antes do % descarta o \n que ficou no buffer
 
                         printf("Digite a Idade:\n");
                         scanf("%d", &listaUtentes[totalUtentes].idade);
 
                         printf("Canal de Proveniencia (1-4):\n");
-                        scanf("%d", &listaUtentes[totalUtentes].canal);
+                        scanf("%d", &listaUtentes[totalUtentes].canal); //especificar o canal - 1 - sns 2- ambulancia 3 - referencia 
+                                                                        //de medico do centro de saude 4 - iniciativa propria (switch case)
 
                         printf("Hora de admissao (HH MM):\n"); //mudar isto HH MM
                         scanf("%d %d", &listaUtentes[totalUtentes].hora, &listaUtentes[totalUtentes].minuto);
@@ -72,7 +73,7 @@ void administracao(void) {
                     int contador = 0;
                     for (int i = 0; i < totalUtentes; i++) {
                         if (strcmp(listaUtentes[i].estado, "Alta Medica") != 0) {
-                            printf("ID: %d | Nome: %s | Hora de Entrada: %02d:%d\n, listaUtentes[i].id, listaUtentes.nome, listaUtentes[i].hora, listaUtentes[i].minuto");
+                            printf("ID: %d | Nome: %s | Hora de Entrada: %02d:%02d\n", listaUtentes[i].id, listaUtentes[i].nome, listaUtentes[i].hora, listaUtentes[i].minuto);
                             contador++;
                         }
                     }
@@ -93,7 +94,7 @@ void administracao(void) {
                     int contador = 0;
                     for(int i = 0; i < totalUtentes; i++) {
                         if(strcmp(listaUtentes[i].estado, "Alta Medica") == 0){
-                            printf("ID: %d | Nome: %s | Hora de Entrada: %02d:%02d\n, listaUtentes[i].id, listaUtentes[i].nome, listaUtentes[i].hora, listaUtentes[i].minuto");
+                            printf("ID: %d | Nome: %s | Hora de Entrada: %02d:%02d\n", listaUtentes[i].id, listaUtentes[i].nome, listaUtentes[i].hora, listaUtentes[i].minuto);
                             contador++;
                         }
                     }
@@ -114,4 +115,4 @@ void administracao(void) {
                 printf("Opção inválida. Tente novamente.\n");
         }
     } while(opcao != 0);
-};
+}
